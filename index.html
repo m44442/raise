@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>株式会社RAISE</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+<body>
+    <header>
+        <h1 class="site-title">株式会社RAISE</h1>
+        <button class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="#home">ホーム</a></li>
+                <li><a href="#about">会社概要</a></li>
+                <li><a href="#services">事業内容</a></li>
+                <li><a href="#contact">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h1>株式会社RAISE</h1>
+        </section>
+
+        <section id="about">
+            <h2>会社概要</h2>
+            <ul class="company-info">
+                <li><strong>会社名：</strong>株式会社RAISE</li>
+                <li><strong>代表者：</strong>中川 雄太</li>
+                <li><strong>設立：</strong>2024年7月</li>
+                <li><strong>資本金：</strong>1,000,000円</li>
+                <li><strong>従業員数：</strong>10名(アルバイト含む)</li>
+            </ul>
+        </section>
+
+        <section id="services">
+            <h2>事業内容</h2>
+            <div class="skill-tags">
+                <span class="skill">電話回線事業</span>
+                <span class="skill">インターネット事業</span>
+                <span class="skill">新電力事業</span>
+                <span class="skill">OA事業</span>
+                <span class="skill">火災保険コンサル</span>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>お問い合わせ</h2>
+            <ul class="timeline">
+                <li><strong>TEL：</strong>06-6867-9584</li>
+                <li><strong>FAX：</strong>06-6867-9585</li>
+                <li><strong>所在地：</strong>〒542-0081 大阪府大阪市中央区南船場３丁目３ 長堀多田ビル６階</li>
+            </ul>
+            <div id="map" style="height: 400px; width: 100%;"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 株式会社RAISE.</p>
+        <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
