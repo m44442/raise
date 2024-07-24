@@ -1,0 +1,299 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Noto Serif JP', 'Hiragino Mincho ProN', 'Yu Mincho', 'MS PMincho', serif;
+    line-height: 1.6;
+    color: #ffffff;
+    background-image: url('pexels-chevanon-325044.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.site-title {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 1.5em;
+    margin: 0;
+    color: #e0e0e0;
+    text-shadow:
+      2px 2px 0px #d0d0d0,
+      4px 4px 0px rgba(0,0,0,0.2);
+    background: linear-gradient(to bottom, #ffffff 0%, #b3b3b3 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent; 
+    filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.3));
+  }
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.menu-toggle span {
+    width: 30px;
+    height: 3px;
+    background: #ffffff;
+    transition: all 0.3s linear;
+}
+
+nav {
+    transition: transform 0.3s ease-in-out;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0 0 10px rgba(0,0,0,0.8);
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: #4b4b4b;
+    text-shadow: 0 0 10px #fff;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px 20px;
+}
+
+section {
+    margin-bottom: 60px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 20px;
+    background-color: transparent;
+}
+
+h1, h2, h3, p {
+    text-shadow:
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000,
+      0 0 10px rgba(0,0,0,0.8);
+  }
+  
+  h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+  }
+  
+  h1 {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 10em;
+    letter-spacing: 4px;
+    color: #e0e0e0;
+    text-shadow:
+      2px 2px 0px #ffffff,
+      4px 4px 0px rgba(0,0,0,0.2);
+    background: linear-gradient(to bottom, #4600f6 0%, #c02121 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent; /* 注：この標準プロパティはまだ広くサポートされていません */
+    filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.3));
+  }
+  
+  h2 {
+    font-size: 4em;
+    color: #ffffff;
+  }
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    padding: 80px 80px;
+    border-radius: 20px;
+    margin: 7px;
+    font-size: 30px;
+    transition: all 0.3s ease;
+    border: 1px solid #fff;
+}
+
+.skill:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 0, 255, 0.4);
+    box-shadow: 0 0 10px #ff00ff;
+}
+
+.timeline {
+    list-style-type: none;
+    padding: 0;
+}
+
+.timeline li {
+    margin-bottom: 20px;
+    padding-left: 20px;
+    border-left: 2px solid #bdc382;
+    position: relative;
+}
+
+.timeline li:before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: -7px;
+    top: 5px;
+    box-shadow: 0 0 10px #ffffff;
+}
+
+footer {
+    background-color: transparent;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 40px;
+}
+
+.social-icons a {
+    color: #ff00ff;
+    font-size: 36px;
+    transition: all 0.3s ease;
+    margin: 0 15px;
+    display: inline-block;
+}
+
+.social-icons a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 15px #ff00ff;
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 250px;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding-top: 60px;
+        transform: translateX(100%);
+    }
+
+    nav.open {
+        transform: translateX(0);
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    section {
+        padding: 40px 15px;
+    }
+
+    .social-icons a {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.75em;
+    }
+
+    .skill {
+        font-size: 12px;
+        padding: 3px 10px;
+    }
+
+    .social-icons a {
+        font-size: 24px;
+    }
+}
+
+
+#map {
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
