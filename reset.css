@@ -1,0 +1,77 @@
+/* 既存のreset.cssの内容に以下を追加 */
+
+/* モバイルでのレンダリングを改善 */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* iOSでのタップ時のハイライトを削除 */
+a, button, input, select, textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* iOSでスムーズスクロールを有効化 */
+body {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* 画面回転後の文字サイズ調整を防止 */
+* {
+  text-size-adjust: none;
+}
+
+/* iOSでのフォーム要素のレンダリングを改善 */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+}
+
+/* 全ブラウザでフォントサイズの一貫性を確保 */
+html {
+  font-size: 16px;
+}
+
+/* 読みやすさを改善 */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* iOSでフォーム要素にフォーカスした際のズームを防止 */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  select,
+  textarea,
+  input {
+    font-size: 16px;
+  }
+}
+
+/* iOSでのデフォルトのボタンスタイリングを削除 */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+/* IEでの画像のオーバーフローを防止 */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* モバイルでのビューポートユニットの問題に対処 */
+@media screen and (max-width: 767px) {
+  .vh-fix {
+    height: calc(var(--vh, 1vh) * 100);
+  }
+}
