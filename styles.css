@@ -1,6 +1,6 @@
 /*メインビジュアル*/
 .main_visual {
-    background-image: url(../images/pexels-chevanon-325044.jpg);
+    background-image: url('images/pexels-chevanon-325044.jpg');
     background-size: cover;
     background-position: center top;
 }
