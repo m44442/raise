@@ -1,0 +1,333 @@
+/* 基本スタイル */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow: hidden;
+    height: 100%;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: rgba(0, 0, 0, 0.7);;
+}
+
+/* ヘッダーとナビゲーション */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* サイトタイトル */
+.site-title {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 3em;
+    font-style: italic;
+    letter-spacing: 2px;
+    color: #ffffff;
+    background: linear-gradient(to bottom, #ffffff, #b3b3b3);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow:
+      2px 2px 3px rgb(227, 226, 226),
+      -1px -1px 0 rgba(117, 110, 110, 0.882);
+    filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.3));
+}
+
+/* メニュートグル（モバイル用） */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.menu-toggle span {
+    width: 30px;
+    height: 3px;
+    background: #ffffff;
+    transition: all 0.3s linear;
+}
+
+/* ナビゲーション */
+nav {
+    transition: transform 0.3s ease-in-out;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: #ffffff;
+    text-shadow: 0 0 10px #fff;
+}
+
+/* メインコンテンツ */
+main {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.fullpage-section {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 4vw;
+    color: #ffffff;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    overflow-y: auto;
+    padding: 80px 20px 20px;
+    background-color: #000000;
+}
+
+#home {
+    display: block;
+}
+
+/* メインビジュアル */
+.main_visual {
+    background-image: url('images/pexels-chevanon-325044.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.main_visual .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* テキストスタイル */
+h1, h2, h3, p {
+    text-shadow:
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000,
+      0 0 10px rgba(0,0,0,0.8);
+}
+
+/* メインタイトル */
+h1 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 13vw;
+    font-weight: 1000;
+    font-style: italic;
+    letter-spacing: 2px;
+    color: #ffffff;
+    background: linear-gradient(to bottom, #ffffff, #b3b3b3);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow:
+      2px 2px 3px rgb(227, 226, 226),
+      -1px -1px 0 rgba(117, 110, 110, 0.882);
+    filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.3));
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+h2 {
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 4em;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+/* スキルタグ */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.service-item {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+    transform: scale(1.05);
+}
+
+.service-item h3 {
+    color: #ffffff;
+    font-size: 70%;
+    text-align: center;
+    z-index: 2;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 5px;
+}
+
+.service-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.7);
+    transition: filter 0.3s ease;
+}
+
+.service-item:hover::before {
+    filter: brightness(0.9);
+}
+
+/* 各サービスの背景画像 */
+#telecom::before {
+    background-image: url('images/b886ed5c6e667dbc41729a366759cd2b_t.jpeg');
+}
+
+#internet::before {
+    background-image: url('images/depositphotos_38826617-stock-photo-finger-pointing-on-tablet-pc.jpg');
+}
+
+#electricity::before {
+    background-image: url('images/publicdomainq-0000454mqj.jpg');
+}
+
+#oa::before {
+    background-image: url('images/d0cf0c9fb603b8fe5bb1a251cd5a3064_t.jpeg');
+}
+
+#insurance::before {
+    background-image: url('images/publicdomainq-0020093aec.jpg');
+}
+
+/* フッター */
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* ソーシャルアイコン */
+.social-icons a {
+    color: #ff00ff;
+    font-size: 24px;
+    transition: all 0.3s ease;
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-icons a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 15px #ff00ff;
+    transform: scale(1.1);
+}
+
+/* 地図 */
+#map {
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* レスポンシブデザイン */
+@media screen and (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav {
+        width: 100%;
+        display: none;
+    }
+
+    nav.open {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    h1 {
+        font-size: 15vw;
+    }
+
+    h2 {
+        font-size: 3em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 18vw;
+    }
+
+    h2 {
+        font-size: 2.5em;
+    }
+}
+
