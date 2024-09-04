@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>株式会社RAISE</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+<body>
+    <header>
+        <div class="site-title">RAISE</div>
+        <button class="menu-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT US</a></li>
+                <li><a href="#services">PROJECT</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="section main_visual fullpage-section">
+            <div class="container">
+                <div role="main">
+                    <h1>RAISE</h1>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section fullpage-section">
+            <h2>ABOUT US</h2>
+            <ul>
+                <li><strong>会社名：</strong>株式会社RAISE</li>
+                <li><strong>代表者：</strong>中川 雄太</li>
+                <li><strong>設立：</strong>2024年7月</li>
+                <li><strong>資本金：</strong>1,000,000円</li>
+                <li><strong>従業員数：</strong>10名(アルバイト含む)</li>
+            </ul>
+        </section>
+
+        <section id="services" class="section fullpage-section">
+            <h2>PROJECT</h2>
+            <div class="service-grid">
+                <div id="telecom" class="service-item">
+                    <h3>電話回線事業</h3>
+                </div>
+                <div id="internet" class="service-item">
+                    <h3>インターネット事業</h3>
+                </div>
+                <div id="electricity" class="service-item">
+                    <h3>新電力事業</h3>
+                </div>
+                <div id="oa" class="service-item">
+                    <h3>OA事業</h3>
+                </div>
+                <div id="insurance" class="service-item">
+                    <h3><p>火災保険</p>
+                        <p>コンサル</p></h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section fullpage-section">
+            <h2>CONTACT</h2>
+            <ul>
+                <li><strong>TEL：</strong>06-6867-9584</li>
+                <li><strong>FAX：</strong>06-6867-9585</li>
+                <li><strong>所在地：</strong>〒542-0081 大阪府大阪市西区新町 1-2-9 日宝四ツ橋新町ビル7F</li>
+            </ul>
+            <div id="map" style="height: 50%; width: 100%;"></div>
+        </section>
+    </main>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
